@@ -4,14 +4,24 @@
 
 <mapper namespace="guestbook">
 
-	<select id="getList" resultType="com.javaex.vo.GuestbookVo">
+<resultMap id="resultMapGuestbook" type="GuestVo">
+	<result column="no" property="no" />
+	<result column="name" property="name" />
+	<result column="password" property="password" />
+	<result column="content" property="content" />
+	<result column="reg_date" property="date" />
+</resultMap>
+
+
+
+	<select id="getList" resultMap="resultMapGuestbook">
 		<![CDATA[
 			SELECT
 				no,
 				name,
 				password,
 				content,
-				reg_date regDate
+				reg_date
 			FROM
 				guestbook
 			ORDER BY
@@ -19,7 +29,7 @@
 		]]>
 	</select>
 	
-	<insert id="insert" parameterType="com.javaex.vo.GuestbookVo">
+	<insert id="insert" parameterType="GuestVo">
 		<![CDATA[
 			INSERT INTO
 				guestbook
@@ -34,7 +44,7 @@
 		]]>
 	</insert>
 	
-	<delete id="delete" parameterType="com.javaex.vo.GuestbookVo">
+	<delete id="delete" parameterType="GuestVo">
 		<![CDATA[
 			DELETE FROM
 				guestbook
