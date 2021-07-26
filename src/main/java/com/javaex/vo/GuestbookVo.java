@@ -7,7 +7,7 @@ public class GuestbookVo {
 	private String name;
 	private String password;
 	private String content;
-	private String regDate;
+	private String date;
 
 	// constructors
 	public GuestbookVo() {
@@ -30,7 +30,7 @@ public class GuestbookVo {
 		this.name = na;
 		this.password = p;
 		this.content = c;
-		this.regDate = d;
+		this.date = d;
 	}
 	
 	// method getter/setter
@@ -66,16 +66,16 @@ public class GuestbookVo {
 		this.content = content;
 	}
 
-	public String getRegDate() {
-		return regDate;
+	public String getDate() {
+		return date;
 	}
 
-	public void setRegDate(String date) {
-		this.regDate = date;
+	public void setDate(String date) {
+		this.date = date;
 	}
 	
 	public String toString() {
-		return "GuestbookVo [no= " + no + ", name= " + name + ", password= " + password + ", content= " + content + ", date= " + regDate + "]";
+		return "GuestbookVo [no= " + no + ", name= " + name + ", password= " + password + ", content= " + content + ", date= " + date + "]";
 	}
 	
 

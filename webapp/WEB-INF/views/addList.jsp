@@ -36,7 +36,7 @@
 			<tr>
 				<td>${ guestVo.no }</td>
 				<td>${ guestVo.name }</td>
-				<td>${ guestVo.regDate }</td>
+				<td>${ guestVo.date }</td>
 				<td><a href="${ pageContext.request.contextPath }/deleteForm?no=${ guestVo.no }">삭제</a></td>
 			</tr>
 			<tr>
