@@ -23,7 +23,7 @@ public class GuestController {
 //		model.addAttribute("gList", gList);
 		model.addAttribute("gList", guestbookDao.getList());
 		
-		return "/WEB-INF/views/addList.jsp";
+		return "/addList";
 	}
 	
 	// add
@@ -38,7 +38,7 @@ public class GuestController {
 	@RequestMapping(value = "/deleteForm", method = { RequestMethod.GET, RequestMethod.POST })
 	public String deleteForm() {
 
-		return "/WEB-INF/views/deleteForm.jsp";
+		return "/deleteForm";
 	}
 	
 	// delete
